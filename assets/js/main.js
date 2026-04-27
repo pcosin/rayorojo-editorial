@@ -9,7 +9,7 @@
   }
 
   const cabeza = splash.querySelector('.splash-cabeza');
-  const rayo   = splash.querySelector('.splash-rayo-svg');
+  const rayo   = splash.querySelector('.splash-rayo-img');
   const flash  = splash.querySelector('.splash-flash');
 
   // Etapa 2: cabeza + textos entran por CSS (0.3s / 0.6s)
@@ -20,8 +20,7 @@
   // Etapa 3b: flash rojo al impacto
   setTimeout(() => flash && flash.classList.add('flash-on'), 2900);
 
-  // Etapa 3c: imagen pasa a color
-  setTimeout(() => cabeza && cabeza.classList.add('color-on'), 3050);
+  // Etapa 3c: rayo queda visible (ya está en su posición por la animación)
 
   // Etapa 4: ocultar splash
   setTimeout(() => {

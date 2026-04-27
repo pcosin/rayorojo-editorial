@@ -62,25 +62,23 @@ img { display: block; max-width: 100%; }
   width: 100%;
   height: auto;
   display: block;
-  filter: grayscale(100%) brightness(0.65);
   opacity: 0;
   transform: scale(0.94);
   animation: splashCabeza 0.9s cubic-bezier(.4,0,.2,1) 0.3s forwards;
-  transition: filter 0.4s ease;
 }
-.splash-cabeza.color-on {
-  filter: grayscale(0%) brightness(1.05);
-}
-.splash-rayo-svg {
+/* rayo bbox original: top=0 left=299 bottom=381 right=660 en imagen 786x1200
+   → left=38.1% top=0% width=46.1% height=31.75% del contenedor */
+.splash-rayo-img {
   position: absolute;
-  top: -4%;
-  right: -6%;
-  width: 50%;
+  top: 0;
+  left: 38.1%;
+  width: 46.1%;
   height: auto;
   opacity: 0;
-  transform: translateY(-160px) rotate(-8deg);
+  transform: translateY(-120%) rotate(-4deg);
+  pointer-events: none;
 }
-.splash-rayo-svg.rayo-cae {
+.splash-rayo-img.rayo-cae {
   animation: rayoCae 0.28s cubic-bezier(0.1, 0, 0.5, 1) forwards;
 }
 .splash-titulo-abajo {
