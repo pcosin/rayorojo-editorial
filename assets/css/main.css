@@ -96,14 +96,17 @@ img { display: block; max-width: 100%; }
   font-weight: 400;
   color: #f0ece0;
   text-transform: uppercase;
-  text-align: justify;
-  text-align-last: justify;
-  text-justify: inter-character;
+  text-align: center;
   line-height: 1;
   margin-top: 0;
   opacity: 0;
   transform: translateY(12px);
   animation: splashSube 0.6s ease 1.7s forwards;
+}
+.editorial-scale {
+  display: inline-block;
+  white-space: nowrap;
+  transform-origin: center center;
 }
 .splash-flash {
   position: absolute;

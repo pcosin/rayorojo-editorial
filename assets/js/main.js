@@ -1,3 +1,15 @@
+/* ── Splash: escalar EDITORIAL para llenar el ancho ─────── */
+function scaleEditorial() {
+  const el = document.querySelector('.editorial-scale');
+  const col = document.querySelector('.splash-columna');
+  if (!el || !col) return;
+  el.style.transform = 'none';
+  const ratio = col.offsetWidth / el.offsetWidth;
+  if (ratio && ratio !== 1) el.style.transform = `scaleX(${ratio})`;
+}
+window.addEventListener('load', scaleEditorial);
+window.addEventListener('resize', scaleEditorial);
+
 /* ── Splash ──────────────────────────────────────────────── */
 (function () {
   const splash = document.getElementById('splash');
