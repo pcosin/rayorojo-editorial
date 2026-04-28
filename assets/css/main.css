@@ -7,7 +7,7 @@
   --rojo2:  #e01a1a;
   --blanco: #f0ece0;
   --gris:   #888;
-  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-serif: 'Calistoga', Georgia, serif;
   --font-sans:  'Oswald', 'Helvetica Neue', Arial, sans-serif;
 }
 
@@ -76,7 +76,7 @@ img { display: block; max-width: 100%; }
   animation: rayoCae 0.28s cubic-bezier(0.1, 0, 0.5, 1) forwards;
 }
 .splash-palabra {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Calistoga', serif;
   font-size: clamp(3rem, 13vw, 5rem);
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -91,7 +91,7 @@ img { display: block; max-width: 100%; }
 .rayo-txt { animation-delay: 1.4s; }
 .rojo-txt { animation-delay: 1.6s; padding-left: 0.18em; }
 .splash-editorial-txt {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Calistoga', serif;
   font-size: clamp(0.7rem, 3vw, 1rem);
   font-weight: 400;
   letter-spacing: 0.55em;
