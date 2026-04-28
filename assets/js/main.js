@@ -4,9 +4,9 @@ function scaleSplashWords() {
   if (!col) return;
   const containerW = col.offsetWidth;
   col.querySelectorAll('.word-scale, .editorial-scale').forEach(el => {
-    el.style.transform = 'scaleX(1)';
-    const naturalW = el.offsetWidth;
-    if (naturalW > 0 && naturalW !== containerW) {
+    el.style.transform = 'none';
+    const naturalW = el.scrollWidth;
+    if (naturalW > 0) {
       el.style.transform = `scaleX(${containerW / naturalW})`;
     }
   });
