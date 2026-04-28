@@ -92,14 +92,15 @@ img { display: block; max-width: 100%; }
 .rojo-txt { animation-delay: 1.6s; padding-left: 0.18em; }
 .splash-editorial-txt {
   font-family: 'Calistoga', serif;
-  font-size: clamp(0.7rem, 3vw, 1rem);
+  font-size: clamp(3rem, 13vw, 5rem);
   font-weight: 400;
   color: #f0ece0;
   text-transform: uppercase;
   text-align: justify;
   text-align-last: justify;
+  text-justify: inter-character;
   line-height: 1;
-  margin-top: 0.3rem;
+  margin-top: 0;
   opacity: 0;
   transform: translateY(12px);
   animation: splashSube 0.6s ease 1.7s forwards;
