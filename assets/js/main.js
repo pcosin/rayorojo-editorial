@@ -3,8 +3,8 @@ function scaleEditorial() {
   const el = document.querySelector('.editorial-scale');
   const col = document.querySelector('.splash-columna');
   if (!el || !col) return;
-  el.style.transform = 'none';
-  const naturalW = el.scrollWidth;
+  el.style.transform = 'scaleX(1)';
+  const naturalW = el.offsetWidth;
   const containerW = col.offsetWidth;
   if (naturalW > 0 && naturalW !== containerW) {
     el.style.transform = `scaleX(${containerW / naturalW})`;
