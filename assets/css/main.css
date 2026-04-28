@@ -79,7 +79,7 @@ img { display: block; max-width: 100%; }
   font-family: 'Calistoga', serif;
   font-size: clamp(3rem, 13vw, 5rem);
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.18em;
   color: #f0ece0;
   text-transform: uppercase;
   text-align: left;
