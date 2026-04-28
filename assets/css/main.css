@@ -94,10 +94,10 @@ img { display: block; max-width: 100%; }
   font-family: 'Calistoga', serif;
   font-size: clamp(0.7rem, 3vw, 1rem);
   font-weight: 400;
-  letter-spacing: 0.55em;
   color: #f0ece0;
   text-transform: uppercase;
-  text-align: center;
+  text-align: justify;
+  text-align-last: justify;
   line-height: 1;
   margin-top: 0.3rem;
   opacity: 0;
