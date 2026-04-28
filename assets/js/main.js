@@ -11,7 +11,7 @@ function scaleSplashWords() {
     }
   });
 }
-window.addEventListener('load', scaleSplashWords);
+document.fonts.ready.then(scaleSplashWords);
 window.addEventListener('resize', scaleSplashWords);
 
 /* ── Splash ──────────────────────────────────────────────── */
