@@ -88,7 +88,7 @@ img { display: block; max-width: 100%; }
   transform: translateY(-14px);
   animation: splashBaja 0.6s ease forwards;
 }
-.rayo-txt { animation-delay: 1.4s; }
+.rayo-txt { animation-delay: 1.4s; padding-left: 0.12em; }
 .rojo-txt { animation-delay: 1.6s; }
 .splash-editorial-txt {
   font-family: 'Calistoga', serif;
