@@ -255,8 +255,13 @@ nav.nav-principal a.active { color: var(--rojo); }
   font-size: clamp(3rem, 8vw, 7rem);
   line-height: 0.95;
   font-weight: 700;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.04em;
   margin-bottom: 1.5rem;
+}
+.hero-line {
+  display: inline-block;
+  white-space: nowrap;
+  transform-origin: center center;
 }
 .hero-sub {
   font-size: clamp(0.85rem, 1.5vw, 1rem);
