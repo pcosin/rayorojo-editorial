@@ -1,17 +1,18 @@
 /* ── Splash: escalar EDITORIAL para llenar el ancho ─────── */
-function scaleEditorial() {
-  const el = document.querySelector('.editorial-scale');
+function scaleSplashWords() {
   const col = document.querySelector('.splash-columna');
-  if (!el || !col) return;
-  el.style.transform = 'scaleX(1)';
-  const naturalW = el.offsetWidth;
+  if (!col) return;
   const containerW = col.offsetWidth;
-  if (naturalW > 0 && naturalW !== containerW) {
-    el.style.transform = `scaleX(${containerW / naturalW})`;
-  }
+  col.querySelectorAll('.word-scale, .editorial-scale').forEach(el => {
+    el.style.transform = 'scaleX(1)';
+    const naturalW = el.offsetWidth;
+    if (naturalW > 0 && naturalW !== containerW) {
+      el.style.transform = `scaleX(${containerW / naturalW})`;
+    }
+  });
 }
-window.addEventListener('load', scaleEditorial);
-window.addEventListener('resize', scaleEditorial);
+window.addEventListener('load', scaleSplashWords);
+window.addEventListener('resize', scaleSplashWords);
 
 /* ── Splash ──────────────────────────────────────────────── */
 (function () {
