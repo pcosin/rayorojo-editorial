@@ -7,8 +7,8 @@
   --rojo2:  #e01a1a;
   --blanco: #f0ece0;
   --gris:   #888;
-  --font-serif: 'Goudy Bookletter 1911', Georgia, serif;
-  --font-sans:  'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans:  'Oswald', 'Helvetica Neue', Arial, sans-serif;
 }
 
 /* ── Reset ───────────────────────────────────────────────── */
@@ -44,7 +44,7 @@ img { display: block; max-width: 100%; }
   pointer-events: none;
 }
 .splash-titulo-arriba {
-  font-family: 'Goudy Bookletter 1911', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(2.2rem, 9vw, 5rem);
   font-weight: 400;
   letter-spacing: 0.05em;
@@ -82,7 +82,7 @@ img { display: block; max-width: 100%; }
   animation: rayoCae 0.28s cubic-bezier(0.1, 0, 0.5, 1) forwards;
 }
 .splash-titulo-abajo {
-  font-family: 'Goudy Bookletter 1911', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(0.9rem, 3.5vw, 1.8rem);
   font-weight: 400;
   letter-spacing: 0.45em;
