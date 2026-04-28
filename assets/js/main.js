@@ -4,8 +4,11 @@ function scaleEditorial() {
   const col = document.querySelector('.splash-columna');
   if (!el || !col) return;
   el.style.transform = 'none';
-  const ratio = col.offsetWidth / el.offsetWidth;
-  if (ratio && ratio !== 1) el.style.transform = `scaleX(${ratio})`;
+  const naturalW = el.scrollWidth;
+  const containerW = col.offsetWidth;
+  if (naturalW > 0 && naturalW !== containerW) {
+    el.style.transform = `scaleX(${containerW / naturalW})`;
+  }
 }
 window.addEventListener('load', scaleEditorial);
 window.addEventListener('resize', scaleEditorial);
