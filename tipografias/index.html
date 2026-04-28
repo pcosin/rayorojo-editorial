@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comparación tipográfica — Rayo Rojo Editorial</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Kreon:wght@400;700&family=Quando&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #080808;
+  color: #f0ece0;
+  font-family: sans-serif;
+  padding: 3rem 2rem;
+}
+h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #cc1111;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+.opciones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2px;
+  background: #1a1a1a;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.opcion {
+  background: #080808;
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.opcion-nombre {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #555;
+}
+.logo {
+  line-height: 1;
+  text-transform: uppercase;
+}
+.logo .word {
+  display: block;
+  font-size: clamp(3rem, 8vw, 4.5rem);
+  font-weight: 400;
+}
+.logo .editorial {
+  display: block;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  letter-spacing: 0.5em;
+  margin-top: 0.3rem;
+  color: #888;
+}
+.titulo-libro {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 400;
+  line-height: 1.2;
+  border-top: 1px solid #1a1a1a;
+  padding-top: 1.5rem;
+}
+.coleccion {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 400;
+  color: #cc1111;
+}
+.cuerpo {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #888;
+  border-top: 1px solid #1a1a1a;
+  padding-top: 1.5rem;
+}
+
+.f-calistoga { font-family: 'Calistoga', serif; }
+.f-kreon     { font-family: 'Kreon', serif; }
+.f-quando    { font-family: 'Quando', serif; }
+</style>
+</head>
+<body>
+
+<h2>Elegí la tipografía — Rayo Rojo Editorial</h2>
+
+<div class="opciones">
+
+  <!-- CALISTOGA -->
+  <div class="opcion">
+    <div class="opcion-nombre">01 — Calistoga</div>
+    <div class="logo f-calistoga">
+      <span class="word">Rayo</span>
+      <span class="word">Rojo</span>
+      <span class="editorial">Editorial</span>
+    </div>
+    <div class="titulo-libro f-calistoga">Los Misterios de Villa Durazno</div>
+    <div class="coleccion f-calistoga">Saga del Gaucho sin Cabeza</div>
+    <div class="cuerpo f-calistoga">Narrativa, arte y rareza. Libros que no existen en ningún otro catálogo.</div>
+  </div>
+
+  <!-- KREON -->
+  <div class="opcion">
+    <div class="opcion-nombre">02 — Kreon</div>
+    <div class="logo f-kreon">
+      <span class="word">Rayo</span>
+      <span class="word">Rojo</span>
+      <span class="editorial">Editorial</span>
+    </div>
+    <div class="titulo-libro f-kreon">Los Misterios de Villa Durazno</div>
+    <div class="coleccion f-kreon">Saga del Gaucho sin Cabeza</div>
+    <div class="cuerpo f-kreon">Narrativa, arte y rareza. Libros que no existen en ningún otro catálogo.</div>
+  </div>
+
+  <!-- QUANDO -->
+  <div class="opcion">
+    <div class="opcion-nombre">03 — Quando</div>
+    <div class="logo f-quando">
+      <span class="word">Rayo</span>
+      <span class="word">Rojo</span>
+      <span class="editorial">Editorial</span>
+    </div>
+    <div class="titulo-libro f-quando">Los Misterios de Villa Durazno</div>
+    <div class="coleccion f-quando">Saga del Gaucho sin Cabeza</div>
+    <div class="cuerpo f-quando">Narrativa, arte y rareza. Libros que no existen en ningún otro catálogo.</div>
+  </div>
+
+</div>
+
+</body>
+</html>
