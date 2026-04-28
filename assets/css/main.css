@@ -31,10 +31,8 @@ img { display: block; max-width: 100%; }
   background: #000;
   z-index: 9999;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.6rem;
   overflow: hidden;
   transition: opacity 0.7s ease, visibility 0.7s ease;
 }
@@ -43,20 +41,16 @@ img { display: block; max-width: 100%; }
   visibility: hidden;
   pointer-events: none;
 }
-.splash-titulo-arriba {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.2rem, 9vw, 5rem);
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  color: #f0ece0;
-  text-transform: uppercase;
-  opacity: 0;
-  transform: translateY(-12px);
-  animation: splashBaja 0.7s ease 0.6s forwards;
+.splash-columna {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: min(220px, 48vw);
+  gap: 0.15rem;
 }
 .splash-cabeza-wrap {
   position: relative;
-  width: min(220px, 48vw);
+  width: 100%;
 }
 .splash-cabeza {
   width: 100%;
@@ -81,16 +75,34 @@ img { display: block; max-width: 100%; }
 .splash-rayo-img.rayo-cae {
   animation: rayoCae 0.28s cubic-bezier(0.1, 0, 0.5, 1) forwards;
 }
-.splash-titulo-abajo {
+.splash-palabra {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(0.9rem, 3.5vw, 1.8rem);
-  font-weight: 400;
-  letter-spacing: 0.45em;
-  color: #cc1111;
+  font-size: clamp(3rem, 13vw, 5rem);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #f0ece0;
   text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  opacity: 0;
+  transform: translateY(-14px);
+  animation: splashBaja 0.6s ease forwards;
+}
+.rayo-txt { animation-delay: 1.4s; }
+.rojo-txt { animation-delay: 1.6s; }
+.splash-editorial-txt {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(0.7rem, 3vw, 1rem);
+  font-weight: 400;
+  letter-spacing: 0.55em;
+  color: #f0ece0;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  margin-top: 0.3rem;
   opacity: 0;
   transform: translateY(12px);
-  animation: splashSube 0.7s ease 0.6s forwards;
+  animation: splashSube 0.6s ease 1.7s forwards;
 }
 .splash-flash {
   position: absolute;
