@@ -46,10 +46,10 @@ window.addEventListener('resize', scaleHeroEditorial);
   // Etapa 2: cabeza + textos entran por CSS (0.3s / 0.6s)
 
   // Etapa 3a: rayo cae
-  setTimeout(() => rayo && rayo.classList.add('rayo-cae'), 2600);
+  setTimeout(() => rayo && rayo.classList.add('rayo-cae'), 3800);
 
   // Etapa 3b: flash rojo al impacto
-  setTimeout(() => flash && flash.classList.add('flash-on'), 2900);
+  setTimeout(() => flash && flash.classList.add('flash-on'), 4100);
 
   // Etapa 3c: rayo queda visible (ya está en su posición por la animación)
 
@@ -59,7 +59,7 @@ window.addEventListener('resize', scaleHeroEditorial);
     const exp = new Date(Date.now() + 8 * 3600 * 1000).toUTCString();
     document.cookie = `rr_splash=1; expires=${exp}; path=/`;
     setTimeout(() => splash.remove(), 750);
-  }, 4000);
+  }, 5800);
 })();
 
 /* ── Descripciones colapsadas ────────────────────────────── */
