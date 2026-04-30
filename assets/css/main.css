@@ -14,7 +14,7 @@
 
 /* ── Reset ───────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { font-size: 17px; scroll-behavior: smooth; }
+html { font-size: 18px; scroll-behavior: smooth; }
 body {
   background: var(--negro);
   color: var(--blanco);
@@ -738,6 +738,20 @@ footer {
 }
 .footer-nav a:hover { color: var(--gris); }
 
+/* ── Imagen de colección ─────────────────────────────────── */
+.coleccion-imagen {
+  max-width: 1280px;
+  margin: 0 auto 4rem;
+  padding: 0 2rem;
+}
+.coleccion-imagen img {
+  width: 100%;
+  max-height: 600px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
 /* ── Galería de tapas SGSC (acordeón) ────────────────────── */
 .tapas-banner-sgsc {
   display: flex;
@@ -768,16 +782,10 @@ footer {
   filter: brightness(1);
 }
 
-/* ── Grilla SGSC: 4 en primera fila, 3+3 en las siguientes ─ */
+/* ── Grilla SGSC: 4 columnas iguales ─────────────────────── */
 .libros-grid--sgsc {
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   justify-content: unset;
-}
-.libros-grid--sgsc .libro-card:nth-child(-n+4) {
-  grid-column: span 3;
-}
-.libros-grid--sgsc .libro-card:nth-child(n+5) {
-  grid-column: span 4;
 }
 
 /* ── Responsive ──────────────────────────────────────────── */
