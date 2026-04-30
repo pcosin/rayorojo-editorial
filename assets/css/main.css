@@ -411,15 +411,15 @@ nav.nav-principal a.active { color: var(--rojo); }
 .libros-grid {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 3rem 2rem 5rem;
+  padding: 3rem 2rem 6rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 2rem 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 3.5rem 2.5rem;
 }
 .libro-card {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 .libro-card-tapa {
   position: relative;
