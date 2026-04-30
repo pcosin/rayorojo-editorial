@@ -309,7 +309,7 @@ nav.nav-principal a.active { color: var(--rojo); }
 /* ── Colecciones — home grid ─────────────────────────────── */
 .colecciones-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1px;
   background: #1a1a1a;
   border: 1px solid #1a1a1a;
@@ -790,6 +790,9 @@ footer {
     position: static;
     max-width: 280px;
   }
+}
+@media (max-width: 860px) {
+  .colecciones-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 640px) {
   nav.nav-principal { display: none; }
