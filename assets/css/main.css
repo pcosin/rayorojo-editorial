@@ -679,6 +679,16 @@ nav.nav-principal a.active { color: var(--rojo); }
 .arbol-nodo-main circle { fill: var(--fondo3); stroke: var(--gris); stroke-width: 2; }
 .arbol-nodo-main text { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; fill: var(--gris); }
 
+/* ── Logo en Quiénes Somos ───────────────────────────────── */
+.qs-logo {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.qs-logo img {
+  height: 160px;
+  width: auto;
+}
+
 /* ── Páginas estáticas (Quiénes / Contacto) ──────────────── */
 .pagina-static {
   max-width: 720px;
