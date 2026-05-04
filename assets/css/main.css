@@ -687,7 +687,7 @@ nav.nav-principal a.active { color: var(--rojo); }
   color: var(--gris);
   line-height: 1.7;
 }
-.contacto-dato strong { color: var(--blanco); }
+.contacto-dato strong { color: var(--texto); }
 .contacto-dato a { color: var(--rojo); }
 .contacto-dato a:hover { color: var(--rojo2); }
 
