@@ -290,24 +290,35 @@ nav.nav-principal a.active { color: var(--rojo); }
 }
 .coleccion-card {
   background: var(--fondo);
-  padding: 2.5rem 2rem;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
   transition: background 0.2s;
   cursor: pointer;
+  overflow: hidden;
 }
 .coleccion-card:hover { background: var(--fondo2); }
-.coleccion-card:hover .col-flecha { transform: translateX(4px); }
-.col-num {
-  font-size: 0.65rem;
-  letter-spacing: 0.3em;
-  color: var(--rojo);
-  font-variant-numeric: tabular-nums;
+.coleccion-card-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: var(--fondo3);
+}
+.coleccion-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.coleccion-card:hover .coleccion-card-img img { transform: scale(1.03); }
+.coleccion-card-info {
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
 }
 .col-nombre {
   font-family: var(--font-serif);
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   line-height: 1.2;
   font-weight: 700;
 }
@@ -316,12 +327,6 @@ nav.nav-principal a.active { color: var(--rojo); }
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--gris);
-}
-.col-flecha {
-  margin-top: auto;
-  font-size: 1.2rem;
-  color: var(--rojo);
-  transition: transform 0.2s;
 }
 
 /* ── Tapas en home (strip horizontal) ───────────────────── */
