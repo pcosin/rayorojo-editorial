@@ -1,12 +1,17 @@
 /* ── Variables ───────────────────────────────────────────── */
 :root {
   --negro:  #121212;
-  --negro2: #1a1a1a;
-  --negro3: #1a1a1a;
+  --negro2: #1c1c1c;
+  --negro3: #252525;
   --rojo:   #cc1111;
   --rojo2:  #e01a1a;
   --blanco: #f0ece0;
-  --gris:   #888;
+  --gris:   #666;
+  /* Paleta clara — páginas de contenido */
+  --fondo:  #f0ebe1;
+  --fondo2: #e8e2d6;
+  --fondo3: #d8d2c6;
+  --texto:  #111111;
   --font-serif:    'Cormorant Garamond', Georgia, serif;
   --font-display:  'Calistoga', Georgia, serif;
   --font-sans:     'Oswald', 'Helvetica Neue', Arial, sans-serif;
@@ -16,8 +21,8 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { font-size: 18px; scroll-behavior: smooth; }
 body {
-  background: var(--negro);
-  color: var(--blanco);
+  background: var(--fondo);
+  color: var(--texto);
   font-family: var(--font-sans);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -241,7 +246,7 @@ nav.nav-principal a.active { color: var(--rojo); }
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 50% 60%, rgba(180,10,10,0.08) 0%, transparent 70%);
+  background: radial-gradient(ellipse at 50% 60%, rgba(180,10,10,0.06) 0%, transparent 70%);
   pointer-events: none;
 }
 .hero-eyebrow {
@@ -266,7 +271,7 @@ nav.nav-principal a.active { color: var(--rojo); }
 }
 .hero-sub {
   font-size: clamp(0.85rem, 1.5vw, 1rem);
-  color: var(--gris);
+  color: #555;
   letter-spacing: 0.08em;
   max-width: 40ch;
 }
@@ -311,11 +316,11 @@ nav.nav-principal a.active { color: var(--rojo); }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
-  background: #1a1a1a;
-  border: 1px solid #1a1a1a;
+  background: var(--fondo3);
+  border: 1px solid var(--fondo3);
 }
 .coleccion-card {
-  background: var(--negro);
+  background: var(--fondo);
   padding: 2.5rem 2rem;
   display: flex;
   flex-direction: column;
@@ -323,7 +328,7 @@ nav.nav-principal a.active { color: var(--rojo); }
   transition: background 0.2s;
   cursor: pointer;
 }
-.coleccion-card:hover { background: var(--negro3); }
+.coleccion-card:hover { background: var(--fondo2); }
 .coleccion-card:hover .col-flecha { transform: translateX(4px); }
 .col-num {
   font-size: 0.65rem;
@@ -382,7 +387,7 @@ nav.nav-principal a.active { color: var(--rojo); }
   padding: 5rem 2rem 3rem;
   max-width: 1280px;
   margin: 0 auto;
-  border-bottom: 1px solid #1e1e1e;
+  border-bottom: 1px solid var(--fondo3);
 }
 .breadcrumb {
   font-size: 0.7rem;
@@ -425,7 +430,7 @@ nav.nav-principal a.active { color: var(--rojo); }
 .libro-card-tapa {
   position: relative;
   overflow: hidden;
-  background: var(--negro3);
+  background: var(--fondo3);
 }
 .libro-card-tapa img {
   width: 100%;
@@ -475,7 +480,7 @@ nav.nav-principal a.active { color: var(--rojo); }
   font-family: var(--font-serif);
   font-size: 1.05rem;
   line-height: 1.8;
-  color: #ccc;
+  color: #333;
 }
 .coleccion-intro p + p { margin-top: 1rem; }
 
@@ -584,7 +589,7 @@ nav.nav-principal a.active { color: var(--rojo); }
   font-family: var(--font-serif);
   font-size: 1.05rem;
   line-height: 1.8;
-  color: #ccc;
+  color: #333;
   margin-bottom: 3rem;
   position: relative;
 }
@@ -599,7 +604,7 @@ nav.nav-principal a.active { color: var(--rojo); }
   left: 0;
   right: 0;
   height: 3em;
-  background: linear-gradient(transparent, var(--negro));
+  background: linear-gradient(transparent, var(--fondo));
 }
 .btn-leer-mas {
   font-size: 0.72rem;
@@ -641,7 +646,7 @@ nav.nav-principal a.active { color: var(--rojo); }
   padding: 0 2rem;
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid #1e1e1e;
+  border-top: 1px solid var(--fondo3);
   padding-top: 2rem;
 }
 .libro-nav a {
@@ -666,12 +671,12 @@ nav.nav-principal a.active { color: var(--rojo); }
   max-width: 100%;
   height: auto;
 }
-.arbol-branch { stroke: #3a3a3a; stroke-width: 2; fill: none; }
-.arbol-nodo circle { fill: var(--negro3); stroke: #3a3a3a; stroke-width: 1.5; transition: fill 0.2s, stroke 0.2s; }
+.arbol-branch { stroke: var(--fondo3); stroke-width: 2; fill: none; }
+.arbol-nodo circle { fill: var(--fondo2); stroke: var(--fondo3); stroke-width: 1.5; transition: fill 0.2s, stroke 0.2s; }
 .arbol-nodo:hover circle { fill: var(--rojo); stroke: var(--rojo); }
-.arbol-nodo text { fill: var(--blanco); font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.05em; pointer-events: none; }
-.arbol-nodo:hover text { fill: #fff; }
-.arbol-nodo-main circle { fill: #1a1a1a; stroke: #444; stroke-width: 2; }
+.arbol-nodo text { fill: var(--texto); font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.05em; pointer-events: none; }
+.arbol-nodo:hover text { fill: var(--texto); }
+.arbol-nodo-main circle { fill: var(--fondo3); stroke: var(--gris); stroke-width: 2; }
 .arbol-nodo-main text { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; fill: var(--gris); }
 
 /* ── Páginas estáticas (Quiénes / Contacto) ──────────────── */
@@ -687,7 +692,7 @@ nav.nav-principal a.active { color: var(--rojo); }
   margin-bottom: 0.5rem;
 }
 .pagina-static .linea { width: 3rem; height: 2px; background: var(--rojo); margin-bottom: 3rem; }
-.pagina-static p { font-size: 1rem; line-height: 1.9; color: #ccc; margin-bottom: 1.5rem; }
+.pagina-static p { font-size: 1rem; line-height: 1.9; color: #333; margin-bottom: 1.5rem; }
 .pagina-static h2 {
   font-family: var(--font-serif);
   font-size: 1.3rem;
@@ -709,6 +714,7 @@ nav.nav-principal a.active { color: var(--rojo); }
 
 /* ── Footer ──────────────────────────────────────────────── */
 footer {
+  background: var(--negro);
   border-top: 1px solid #1a1a1a;
   padding: 3rem 2rem;
   display: flex;
