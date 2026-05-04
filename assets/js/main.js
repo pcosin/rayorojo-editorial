@@ -14,20 +14,6 @@ function scaleSplashWords() {
 document.fonts.ready.then(scaleSplashWords);
 window.addEventListener('resize', scaleSplashWords);
 
-/* ── Hero: escalar "Editorial" al ancho de "Rayo Rojo" ────── */
-function scaleHeroEditorial() {
-  const ref = document.querySelector('.hero h1 .hero-line:not(.hero-editorial-line)');
-  const editorial = document.querySelector('.hero-editorial-line');
-  if (!ref || !editorial) return;
-  editorial.style.transform = 'none';
-  const refW = ref.scrollWidth;
-  const editW = editorial.scrollWidth;
-  if (refW > 0 && editW > 0) {
-    editorial.style.transform = `scaleX(${refW / editW})`;
-  }
-}
-document.fonts.ready.then(scaleHeroEditorial);
-window.addEventListener('resize', scaleHeroEditorial);
 
 /* ── Splash ──────────────────────────────────────────────── */
 (function () {

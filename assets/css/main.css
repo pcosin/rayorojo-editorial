@@ -230,66 +230,35 @@ nav.nav-principal a.active { color: var(--rojo); }
   line-height: 1;
 }
 
-/* ── Hero (home) ─────────────────────────────────────────── */
-.hero {
+/* ── Home landing ────────────────────────────────────────── */
+.home-landing {
   min-height: 100svh;
+  background: var(--negro);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  text-align: center;
+  gap: 3rem;
   padding: 4rem 2rem;
-  position: relative;
-  overflow: hidden;
 }
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at 50% 60%, rgba(180,10,10,0.06) 0%, transparent 70%);
-  pointer-events: none;
+.home-logo {
+  height: clamp(220px, 40vh, 380px);
+  width: auto;
 }
-.hero-eyebrow {
-  font-size: 0.7rem;
-  letter-spacing: 0.4em;
+.home-links {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+.home-links a {
+  font-family: var(--font-sans);
+  font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+  letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--rojo);
-  margin-bottom: 1.5rem;
+  color: var(--blanco);
+  transition: color 0.2s;
 }
-.hero h1 {
-  font-family: var(--font-display);
-  font-size: clamp(3rem, 8vw, 7rem);
-  line-height: 1.15;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  margin-bottom: 1.5rem;
-}
-.hero-line {
-  display: inline-block;
-  white-space: nowrap;
-  transform-origin: center center;
-}
-.hero-sub {
-  font-size: clamp(0.85rem, 1.5vw, 1rem);
-  color: #555;
-  letter-spacing: 0.08em;
-  max-width: 40ch;
-}
-.hero-scroll {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 0.65rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--gris);
-  animation: scrollBounce 2s ease-in-out infinite;
-}
-@keyframes scrollBounce {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(6px); }
-}
+.home-links a:hover { color: var(--rojo); }
 
 /* ── Sección genérica ────────────────────────────────────── */
 .seccion {
@@ -726,14 +695,12 @@ nav.nav-principal a.active { color: var(--rojo); }
 footer {
   background: var(--fondo2);
   border-top: 1px solid var(--fondo3);
-  padding: 3rem 2rem;
+  padding: 3rem 4rem;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: space-between;
   align-items: center;
-  max-width: 1280px;
-  margin: 0 auto;
 }
 .footer-logo img { height: 36px; width: auto; opacity: 0.6; }
 .footer-copy {
