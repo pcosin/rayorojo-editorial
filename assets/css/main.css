@@ -714,8 +714,8 @@ nav.nav-principal a.active { color: var(--rojo); }
 
 /* ── Footer ──────────────────────────────────────────────── */
 footer {
-  background: var(--negro);
-  border-top: 1px solid #1a1a1a;
+  background: var(--fondo2);
+  border-top: 1px solid var(--fondo3);
   padding: 3rem 2rem;
   display: flex;
   flex-wrap: wrap;
@@ -729,7 +729,7 @@ footer {
 .footer-copy {
   font-size: 0.7rem;
   letter-spacing: 0.1em;
-  color: #444;
+  color: var(--gris);
 }
 .footer-nav {
   display: flex;
@@ -739,10 +739,10 @@ footer {
   font-size: 0.7rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #444;
+  color: var(--gris);
   transition: color 0.2s;
 }
-.footer-nav a:hover { color: var(--gris); }
+.footer-nav a:hover { color: var(--texto); }
 
 /* ── Imagen de colección ─────────────────────────────────── */
 .coleccion-imagen {
