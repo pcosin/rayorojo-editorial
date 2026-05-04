@@ -680,6 +680,7 @@ nav.nav-principal a.active { color: var(--rojo); }
   font-size: 0.9rem;
   color: var(--gris);
   line-height: 1.7;
+  margin-bottom: 2.5rem;
 }
 .contacto-dato strong { color: var(--texto); }
 .contacto-dato a { color: var(--rojo); }
