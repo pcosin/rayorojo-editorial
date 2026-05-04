@@ -455,13 +455,13 @@ nav.nav-principal a.active { color: var(--rojo); }
 
 /* ── Agente Rayo ─────────────────────────────────────────── */
 .agente-rayo-section {
-  background: var(--negro2);
+  background: var(--fondo2);
   padding: 4rem 2rem;
   margin-bottom: 1rem;
 }
 .agente-rayo-banner {
   display: flex;
-  gap: 0;
+  gap: 4px;
   max-width: 1280px;
   margin: 0 auto 3rem;
   overflow: hidden;
@@ -469,15 +469,9 @@ nav.nav-principal a.active { color: var(--rojo); }
 .agente-rayo-banner img {
   flex: 1;
   width: 0;
-  height: auto;
+  height: 320px;
   object-fit: cover;
   display: block;
-  transition: flex 0.3s ease, filter 0.3s ease;
-  filter: brightness(0.9);
-}
-.agente-rayo-banner img:hover {
-  flex: 2;
-  filter: brightness(1);
 }
 .agente-rayo-bio {
   max-width: 800px;
@@ -487,7 +481,7 @@ nav.nav-principal a.active { color: var(--rojo); }
   font-family: var(--font-serif);
   font-size: 1.05rem;
   line-height: 1.8;
-  color: #ccc;
+  color: #333;
 }
 
 /* ── Galería de fotos del libro ──────────────────────────── */
