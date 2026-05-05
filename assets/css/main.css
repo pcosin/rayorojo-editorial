@@ -497,8 +497,9 @@ nav.nav-principal a.active { color: var(--rojo); }
   margin-top: 10px;
 }
 .foto-thumb {
-  height: 64px;
-  width: auto;
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
   cursor: pointer;
   opacity: 0.75;
   border: 2px solid transparent;
