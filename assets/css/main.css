@@ -767,8 +767,14 @@ footer {
 
 /* ── Grilla SGSC: 4 columnas iguales ─────────────────────── */
 .libros-grid--sgsc {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   justify-content: unset;
+}
+.libros-grid--sgsc .libro-card:nth-child(-n+4) {
+  grid-column: span 3;
+}
+.libros-grid--sgsc .libro-card:nth-child(n+5) {
+  grid-column: span 4;
 }
 
 /* ── Responsive ──────────────────────────────────────────── */
