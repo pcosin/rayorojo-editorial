@@ -489,27 +489,46 @@ nav.nav-principal a.active { color: var(--rojo); }
   color: #333;
 }
 
-/* ── Galería de fotos del libro ──────────────────────────── */
-.libro-galeria {
+/* ── Miniaturas de fotos interiores ──────────────────────── */
+.libro-fotos-thumbs {
   display: flex;
-  gap: 4px;
-  overflow-x: auto;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0;
-  scrollbar-width: none;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 10px;
 }
-.libro-galeria::-webkit-scrollbar { display: none; }
-.libro-galeria img {
-  height: 320px;
+.foto-thumb {
+  height: 64px;
   width: auto;
-  object-fit: cover;
-  flex-shrink: 0;
-  display: block;
-  filter: brightness(0.92);
-  transition: filter 0.3s ease;
+  cursor: pointer;
+  opacity: 0.75;
+  border: 2px solid transparent;
+  transition: opacity 0.2s, border-color 0.2s;
 }
-.libro-galeria img:hover { filter: brightness(1); }
+.foto-thumb:hover, .foto-thumb.active { opacity: 1; border-color: var(--rojo); }
+
+/* ── Lightbox ────────────────────────────────────────────── */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.93);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+}
+.lightbox.open { display: flex; }
+.lb-img { max-height: 90vh; max-width: 90vw; object-fit: contain; }
+.lb-close {
+  position: absolute; top: 1rem; right: 1.5rem;
+  font-size: 2.5rem; color: #fff; background: none; border: none; cursor: pointer; line-height: 1;
+}
+.lb-prev, .lb-next {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  font-size: 3rem; color: #fff; background: none; border: none; cursor: pointer; padding: 1rem;
+  user-select: none;
+}
+.lb-prev { left: 0.5rem; }
+.lb-next { right: 0.5rem; }
 
 /* ── Página de libro ─────────────────────────────────────── */
 .libro-single {
