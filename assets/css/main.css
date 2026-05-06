@@ -552,7 +552,7 @@ nav.nav-principal a.active { color: var(--rojo); }
   position: sticky;
   top: 6rem;
 }
-.libro-tapa-wrap img {
+.libro-tapa-wrap > img {
   width: 100%;
   box-shadow: 0 20px 60px rgba(0,0,0,0.7);
 }
