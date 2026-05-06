@@ -299,13 +299,18 @@ nav.nav-principal a.active { color: var(--rojo); }
 .coleccion-card:hover { background: var(--fondo2); }
 .coleccion-card-img {
   width: 100%;
-  aspect-ratio: 4/3;
+  height: 220px;
   overflow: hidden;
   background: var(--fondo3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .coleccion-card-img img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   object-fit: contain;
   transition: transform 0.4s ease;
 }
