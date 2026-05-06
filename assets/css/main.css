@@ -497,9 +497,11 @@ nav.nav-principal a.active { color: var(--rojo); }
 /* ── Miniaturas de fotos interiores ──────────────────────── */
 .libro-fotos-thumbs {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   gap: 6px;
-  flex-wrap: wrap;
   margin-top: 10px;
+  overflow-x: auto;
 }
 .foto-thumb {
   width: 72px;
