@@ -283,24 +283,28 @@ nav.nav-principal a.active { color: var(--rojo); }
 
 /* ── Colecciones — home grid ─────────────────────────────── */
 .colecciones-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 1px;
   background: var(--fondo3);
   border: 1px solid var(--fondo3);
+  max-width: 860px;
+  margin: 0 auto;
 }
 .coleccion-card {
   background: var(--fondo);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   transition: background 0.2s;
   cursor: pointer;
   overflow: hidden;
+  min-height: 120px;
 }
 .coleccion-card:hover { background: var(--fondo2); }
 .coleccion-card-img {
-  width: 100%;
-  height: 220px;
+  flex: 0 0 160px;
+  height: 120px;
   overflow: hidden;
   background: var(--fondo);
   display: flex;
@@ -315,16 +319,17 @@ nav.nav-principal a.active { color: var(--rojo); }
   object-fit: contain;
   transition: transform 0.4s ease;
 }
-.coleccion-card:hover .coleccion-card-img img { transform: scale(1.03); }
+.coleccion-card:hover .coleccion-card-img img { transform: scale(1.05); }
 .coleccion-card-info {
-  padding: 1.5rem 1.75rem;
+  padding: 1rem 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.3rem;
+  flex: 1;
 }
 .col-nombre {
   font-family: var(--font-serif);
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   line-height: 1.2;
   font-weight: 700;
 }
@@ -826,7 +831,8 @@ footer {
   .nav-toggle { display: flex; }
   .seccion { padding: 3rem 1.25rem; }
   .libros-grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem 1rem; }
-  .colecciones-grid { grid-template-columns: 1fr; }
+  .coleccion-card { flex-direction: column; min-height: auto; }
+  .coleccion-card-img { flex: none; width: 100%; height: 160px; }
   .libro-single { padding: 2.5rem 1.25rem 4rem; }
   .coleccion-header { padding: 3rem 1.25rem 2rem; }
   .pagina-static { padding: 3rem 1.25rem 4rem; }
