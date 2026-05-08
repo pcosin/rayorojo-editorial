@@ -320,6 +320,7 @@ nav.nav-principal a.active { color: var(--rojo); }
   transition: transform 0.4s ease;
 }
 .coleccion-card:hover .coleccion-card-img img { transform: scale(1.05); }
+.coleccion-card-img--sn img { max-height: 70%; max-width: 70%; }
 .coleccion-card-info {
   padding: 1rem 1.5rem;
   display: flex;
@@ -427,11 +428,6 @@ nav.nav-principal a.active { color: var(--rojo); }
 .libro-card:hover .libro-card-tapa img {
   transform: scale(1.05);
   filter: brightness(1);
-}
-.libro-card-tapa-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 50%);
 }
 .libro-card-info {
   padding: 0 0.25rem;
