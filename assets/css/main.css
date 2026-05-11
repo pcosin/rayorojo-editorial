@@ -57,7 +57,7 @@ img { display: block; max-width: 100%; }
 .splash-cabeza-wrap {
   position: relative;
   width: 100%;
-  margin-top: -0.3rem;
+  margin-top: -1.2rem;
 }
 .splash-cabeza {
   width: 100%;
@@ -243,7 +243,7 @@ nav.nav-principal a.active { color: var(--rojo); }
   padding: 4rem 2rem;
 }
 .home-logo {
-  height: clamp(220px, 40vh, 380px);
+  height: clamp(280px, 50vh, 480px);
   width: auto;
 }
 .home-links {
@@ -763,6 +763,11 @@ footer {
   object-fit: contain;
   display: inline-block;
   margin: 0 auto;
+}
+.coleccion-imagen--sgsc img {
+  max-width: 800px;
+  max-height: none;
+  width: 100%;
 }
 .coleccion-imagen--chica img {
   max-width: 260px;
