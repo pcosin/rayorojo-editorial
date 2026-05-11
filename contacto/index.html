@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
 <link rel="icon" href="../assets/img/logo_web.jpg">
-<link rel="stylesheet" href="../assets/css/main.css?v=14">
+<link rel="stylesheet" href="../assets/css/main.css?v=15">
 </head>
 <body>
 <header id="site-header">
@@ -23,6 +23,12 @@
       <li><a href="../contacto/index.html" class="active">Contacto</a></li>
     </ul>
   </nav>
+  <form class="nav-search" action="../buscar/index.html" method="get">
+    <input class="nav-search-input" type="search" name="q" placeholder="Buscar..." autocomplete="off">
+    <button class="nav-search-btn" type="submit" aria-label="Buscar">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </button>
+  </form>
   <button class="nav-toggle" aria-label="Menú">
     <span></span><span></span><span></span>
   </button>
@@ -32,6 +38,12 @@
   <a href="../index.html">Catálogo</a>
   <a href="../quienes-somos/index.html">Quiénes Somos</a>
   <a href="../contacto/index.html">Contacto</a>
+  <form class="nav-search nav-search--mobile" action="../buscar/index.html" method="get">
+    <input class="nav-search-input" type="search" name="q" placeholder="Buscar..." autocomplete="off">
+    <button class="nav-search-btn" type="submit" aria-label="Buscar">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </button>
+  </form>
 </div>
 <main>
   <div class="pagina-static">

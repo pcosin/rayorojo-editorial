@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Rayo Rojo Editorial — Libros independientes de Buenos Aires">
+<title>Buscar — Rayo Rojo Editorial</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+<link rel="icon" href="../assets/img/logo_web.jpg">
+<link rel="stylesheet" href="../assets/css/main.css?v=15">
+</head>
+<body>
+<header id="site-header">
+  <a class="logo-link" href="../index.html">
+    <img src="../assets/img/logo_web.jpg" alt="Rayo Rojo Editorial">
+  </a>
+  <nav class="nav-principal">
+    <ul>
+      <li><a href="../index.html">Catálogo</a></li>
+      <li><a href="../quienes-somos/index.html">Quiénes Somos</a></li>
+      <li><a href="../contacto/index.html">Contacto</a></li>
+    </ul>
+  </nav>
+  <form class="nav-search" action="../buscar/index.html" method="get">
+    <input class="nav-search-input" type="search" name="q" placeholder="Buscar..." autocomplete="off">
+    <button class="nav-search-btn" type="submit" aria-label="Buscar">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </button>
+  </form>
+  <button class="nav-toggle" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+<div id="nav-mobile">
+  <button class="nav-mobile-close" aria-label="Cerrar">✕</button>
+  <a href="../index.html">Catálogo</a>
+  <a href="../quienes-somos/index.html">Quiénes Somos</a>
+  <a href="../contacto/index.html">Contacto</a>
+  <form class="nav-search nav-search--mobile" action="../buscar/index.html" method="get">
+    <input class="nav-search-input" type="search" name="q" placeholder="Buscar..." autocomplete="off">
+    <button class="nav-search-btn" type="submit" aria-label="Buscar">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </button>
+  </form>
+</div>
+<main>
+  <section class="seccion buscar-seccion">
+    <h1 class="buscar-titulo">Buscar</h1>
+    <form class="buscar-form" id="buscar-form" action="" method="get">
+      <input class="buscar-input" type="search" name="q" id="buscar-q" placeholder="Título, autor o colección..." autocomplete="off">
+      <button class="buscar-btn" type="submit" aria-label="Buscar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+    </form>
+    <div id="buscar-resultados"></div>
+  </section>
+</main>
+<script>
+(function(){
+  var BOOKS = [{"titulo": "Los Misterios de Villa Durazno", "autor": "", "coleccion": "Saga del Gaucho sin Cabeza", "url": "../libro/los-misterios-de-villa-durazno/index.html"}, {"titulo": "La Conspiración de los Ilíacos", "autor": "", "coleccion": "Saga del Gaucho sin Cabeza", "url": "../libro/la-conspiracion-de-los-iliacos/index.html"}, {"titulo": "Un Homungulem para la Argentina", "autor": "", "coleccion": "Saga del Gaucho sin Cabeza", "url": "../libro/un-homungulem-para-la-argentina/index.html"}, {"titulo": "De los Justicialistas de los Últimos Días", "autor": "", "coleccion": "Saga del Gaucho sin Cabeza", "url": "../libro/de-los-justicialistas-de-los-ultimos-dias/index.html"}, {"titulo": "Villa Durazno, el Pueblo Elegido", "autor": "", "coleccion": "Saga del Gaucho sin Cabeza", "url": "../libro/villa-durazno-el-pueblo-elegido/index.html"}, {"titulo": "Kobrukoko es Sin Cabeza en Bantú", "autor": "", "coleccion": "Saga del Gaucho sin Cabeza", "url": "../libro/kobrukoko-es-sin-cabeza-en-bantu/index.html"}, {"titulo": "Villa Durazno, Me Gusta", "autor": "", "coleccion": "Saga del Gaucho sin Cabeza", "url": "../libro/villa-durazno-me-gusta/index.html"}, {"titulo": "La Pachamama y el Dinosaurio", "autor": "", "coleccion": "Saga del Gaucho sin Cabeza", "url": "../libro/la-pachamama-y-el-dinosaurio/index.html"}, {"titulo": "Buenos Aires, Capital de la Eternidad", "autor": "", "coleccion": "Saga del Gaucho sin Cabeza", "url": "../libro/buenos-aires-capital-de-la-eternidad/index.html"}, {"titulo": "¡Ay! Dijo la IA", "autor": "", "coleccion": "Saga del Gaucho sin Cabeza", "url": "../libro/ay-dijo-la-ia/index.html"}, {"titulo": "Advenimiento", "autor": "", "coleccion": "Serie Negra", "url": "../libro/advenimiento/index.html"}, {"titulo": "Agujero Negro", "autor": "", "coleccion": "Serie Negra", "url": "../libro/agujero-negro/index.html"}, {"titulo": "La Gata Flora", "autor": "", "coleccion": "Serie Negra", "url": "../libro/la-gata-flora/index.html"}, {"titulo": "Cojer — La pornografía clandestina en el Río de la Plata", "autor": "", "coleccion": "Museo Erótico", "url": "../libro/cojer-la-pornografia-clandestina-en-el-rio-de-la-plata/index.html"}, {"titulo": "El Otro Yo del Sr. Divito", "autor": "", "coleccion": "Museo Erótico", "url": "../libro/el-otro-yo-del-sr-divito/index.html"}, {"titulo": "Un Libro de Mierda y al Pedo", "autor": "", "coleccion": "Museo Erótico", "url": "../libro/un-libro-de-mierda-y-al-pedo/index.html"}, {"titulo": "\"?\" — Julián Desbats", "autor": "", "coleccion": "Arte", "url": "../libro/interrogacion-julian-desbats/index.html"}, {"titulo": "My Monster Movie Book", "autor": "", "coleccion": "Arte", "url": "../libro/my-monster-movie-book/index.html"}, {"titulo": "Las desopilantes y descabelladas aventuras de Mr. Finch", "autor": "", "coleccion": "Arte", "url": "../libro/las-desopilantes-y-descabelladas-aventuras-de-mr-finch/index.html"}, {"titulo": "El Suicidio como Proyecto de Vida", "autor": "", "coleccion": "Trilogía del Suicidio", "url": "../libro/el-suicidio-como-proyecto-de-vida/index.html"}, {"titulo": "No por Mucho Suicidarse se Muere más Temprano", "autor": "", "coleccion": "Trilogía del Suicidio", "url": "../libro/no-por-mucho-suicidarse-se-muere-mas-temprano/index.html"}, {"titulo": "Suicidio Póstumo", "autor": "", "coleccion": "Trilogía del Suicidio", "url": "../libro/suicidio-postumo/index.html"}, {"titulo": "Mamíferos", "autor": "", "coleccion": "Otros", "url": "../libro/mamiferos/index.html"}, {"titulo": "No Hay Peor Ciego", "autor": "", "coleccion": "Otros", "url": "../libro/no-hay-peor-ciego/index.html"}];
+  function normalize(s) { return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,''); }
+  function search(q) {
+    var n = normalize(q.trim());
+    if (!n) return [];
+    return BOOKS.filter(function(b) {
+      return normalize(b.titulo).includes(n) ||
+             normalize(b.autor).includes(n) ||
+             normalize(b.coleccion).includes(n);
+    });
+  }
+  function render(q) {
+    var res = document.getElementById('buscar-resultados');
+    if (!q.trim()) { res.innerHTML = ''; return; }
+    var hits = search(q);
+    if (!hits.length) {
+      res.innerHTML = '<p class="buscar-sin-resultados">Búsqueda sin resultados</p>';
+      return;
+    }
+    res.innerHTML = '<ul class="buscar-lista">' +
+      hits.map(function(b) {
+        return '<li><a class="buscar-item" href="' + b.url + '">' +
+          '<span class="buscar-item-titulo">' + b.titulo + '</span>' +
+          '<span class="buscar-item-meta">' + b.autor + (b.autor ? ' · ' : '') + b.coleccion + '</span>' +
+          '</a></li>';
+      }).join('') + '</ul>';
+  }
+  var params = new URLSearchParams(window.location.search);
+  var q = params.get('q') || '';
+  if (q) {
+    document.getElementById('buscar-q').value = q;
+    render(q);
+  }
+  document.getElementById('buscar-form').addEventListener('submit', function(ev) {
+    ev.preventDefault();
+    var val = document.getElementById('buscar-q').value;
+    history.replaceState(null,'','?q=' + encodeURIComponent(val));
+    render(val);
+  });
+})();
+</script>
+<footer>
+  <div class="footer-logo"><a href="../index.html"><img src="../assets/img/logo_web.jpg" alt="Rayo Rojo Editorial"></a></div>
+  <p class="footer-copy">© Rayo Rojo Editorial · Buenos Aires</p>
+  <nav class="footer-nav">
+    <a href="../quienes-somos/index.html">Quiénes Somos</a>
+    <a href="../contacto/index.html">Contacto</a>
+  </nav>
+</footer>
+<div id="flash-rojo"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
