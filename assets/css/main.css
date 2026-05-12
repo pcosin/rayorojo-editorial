@@ -964,6 +964,7 @@ footer {
 .libros-grid--sgsc .libro-card-tapa {
   display: flex;
   justify-content: center;
+  background: transparent;
 }
 .libros-grid--sgsc .libro-card-tapa img {
   width: auto;
