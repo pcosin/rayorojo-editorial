@@ -961,6 +961,15 @@ footer {
 .libros-grid--sgsc .libro-card:nth-child(n+5) {
   grid-column: span 4;
 }
+.libros-grid--sgsc .libro-card-tapa {
+  display: flex;
+  justify-content: center;
+}
+.libros-grid--sgsc .libro-card-tapa img {
+  width: auto;
+  height: 260px;
+  max-width: 100%;
+}
 
 /* ── Responsive ──────────────────────────────────────────── */
 @media (max-width: 900px) {
