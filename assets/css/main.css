@@ -234,10 +234,12 @@ nav.nav-principal a.active { color: var(--rojo); }
   border-radius: 3px 0 0 3px;
   color: var(--blanco);
   font-family: var(--font-sans);
-  font-size: 1rem;
-  padding: 0.55rem 0.9rem;
+  font-size: 0.95rem;
+  height: 2.6rem;
+  padding: 0 0.9rem;
   width: 280px;
   outline: none;
+  box-sizing: border-box;
 }
 .home-search-input::placeholder { color: rgba(255,255,255,0.45); }
 .home-search-input:focus { background: rgba(255,255,255,0.2); }
@@ -247,9 +249,12 @@ nav.nav-principal a.active { color: var(--rojo); }
   border-radius: 0 3px 3px 0;
   color: #fff;
   cursor: pointer;
-  padding: 0.5rem 0.7rem;
+  height: 2.6rem;
+  width: 2.6rem;
   display: flex;
   align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 .home-search-btn:hover { background: var(--rojo2); }
 
