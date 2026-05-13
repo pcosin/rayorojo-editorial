@@ -954,6 +954,7 @@ footer {
 .libros-grid--sgsc {
   grid-template-columns: repeat(12, 1fr);
   justify-content: unset;
+  gap: 2rem 0.5rem;
 }
 .libros-grid--sgsc .libro-card:nth-child(-n+4) {
   grid-column: span 3;
@@ -968,7 +969,7 @@ footer {
   background: transparent;
 }
 .libros-grid--sgsc .libro-card-tapa img {
-  width: 175px;
+  width: 220px;
   height: auto;
   max-width: 100%;
 }
