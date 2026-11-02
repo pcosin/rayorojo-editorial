@@ -578,6 +578,10 @@ nav.nav-principal a.active { color: var(--rojo); }
 .libro-card-info {
   padding: 0 0.25rem;
 }
+/* Tapas apaisadas (más anchas que altas): ocupan 2 columnas para no quedar chicas */
+.libro-card--apaisado {
+  grid-column: span 2;
+}
 .libro-card-titulo {
   font-family: var(--font-serif);
   font-size: 1.05rem;
@@ -700,6 +704,10 @@ nav.nav-principal a.active { color: var(--rojo); }
   position: sticky;
   top: 6rem;
 }
+.libro-single--apaisado {
+  grid-template-columns: 52% 1fr;
+  gap: 3.5rem;
+}
 .libro-tapa-wrap > img {
   width: 100%;
 }
@@ -734,6 +742,7 @@ nav.nav-principal a.active { color: var(--rojo); }
   color: #333;
   margin-bottom: 3rem;
   position: relative;
+  white-space: pre-line;
 }
 .descripcion-colapsada {
   max-height: 6em;
@@ -983,6 +992,9 @@ footer {
   .libro-tapa-wrap {
     position: static;
     max-width: 280px;
+  }
+  .libro-single--apaisado .libro-tapa-wrap {
+    max-width: 480px;
   }
 }
 @media (max-width: 640px) {
